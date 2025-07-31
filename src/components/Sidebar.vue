@@ -13,12 +13,13 @@
   </div>
 </template>
 
-<script>
-export default {
+<script setup></script>
 
+<style scoped>
+.sidebar {
+  width: 200px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  height: 100%;
 }
-</script>
-
-<style>
-
 </style>
