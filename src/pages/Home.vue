@@ -31,22 +31,22 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRouter } from "vue-router";
-import { useAuthStore } from "@/stores/auth";
-import BaseText from "@/components/atoms/BaseText.vue";
-import BaseButton from "@/components/atoms/BaseButton.vue";
-import Sidebar from "../components/Sidebar.vue";
+import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+import { useAuthStore } from '@/stores/auth';
+import BaseText from '@/components/atoms/BaseText.vue';
+import BaseButton from '@/components/atoms/BaseButton.vue';
+import Sidebar from '../components/Sidebar.vue';
 
-const router = useRouter();
-const authStore = useAuthStore();
+const router = useRouter()
+const authStore = useAuthStore()
 
-const isAuthenticated = computed(() => authStore.isAuthenticated);
-const user = computed(() => authStore.user);
+const isAuthenticated = computed(() => authStore.isAuthenticated)
+const user = computed(() => authStore.user)
 
 const handleLogout = () => {
-  authStore.logout();
-  router.push("/login");
+  authStore.logout()
+  router.push('/login')
 };
 </script>
 

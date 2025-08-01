@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="sidebar">
+  <div class="sidebar">
+    <nav>
       <ul>
         <li>
           <router-link to="#">질문&답변</router-link>
@@ -20,6 +20,7 @@
   width: 200px;
   background-color: #f8f9fa;
   padding: 20px;
+  margin: 0 auto;
   height: 100%;
 }
 </style>
