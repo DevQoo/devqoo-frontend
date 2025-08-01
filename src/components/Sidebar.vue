@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <nav>
-      <ul>
+      <ul> 
         <li>
           <router-link to="#">질문&답변</router-link>
         </li>
@@ -22,5 +22,10 @@
   padding: 20px;
   margin: 0 auto;
   height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 </style>
