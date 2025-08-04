@@ -1,11 +1,20 @@
 <template>
   <div class="login-form">
     <div class="login-form__header">
-      <BaseLogo
-        size="custom"
-        class="login-form__logo"
-      />
+      <BaseLogo size="custom" class="login-form__logo" />
     </div>
+
+    <BaseButton
+      type="submit"
+      variant="primary"
+      size="large"
+      full-width
+      :loading="isLoading"
+      class="login-form__button login-form__login-button"
+      icon="pen"
+    >
+      로그인
+    </BaseButton>
 
     <form @submit.prevent="handleSubmit" class="login-form__form">
       <FormGroup spacing="large">
@@ -34,9 +43,7 @@
         />
 
         <div class="login-form__forgot-password">
-          <a href="/">
-            아이디/비밀번호 찾기 >
-          </a>
+          <a href="/"> 아이디/비밀번호 찾기 > </a>
         </div>
 
         <BaseButton
@@ -125,7 +132,7 @@ const validateForm = () => {
 }
 
 const handleSubmit = async () => {
-  console.log('handleSubmit');
+  console.log('handleSubmit')
   if (!validateForm()) return
 
   try {
