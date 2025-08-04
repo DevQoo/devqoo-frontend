@@ -95,12 +95,10 @@ const handleLogout = () => {
     gap: 20px;
     text-align: center;
   }
-
   .home__nav {
     flex-direction: column;
     gap: 12px;
   }
-
   .home__content {
     padding: 40px 0;
   }
