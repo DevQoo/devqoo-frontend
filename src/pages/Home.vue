@@ -1,17 +1,27 @@
 <template>
   <div class="home">
     <div class="home__header">
-      <BaseText tag="h1" variant="heading1" color="dark" weight="bold"> DevQoo 메인 페이지 </BaseText>
+      <BaseText tag="h1" variant="heading1" color="dark" weight="bold">
+        DevQoo 메인 페이지
+      </BaseText>
 
       <div class="home__nav">
         <template v-if="!isAuthenticated">
-          <BaseButton variant="outline" @click="router.push('/login')"> 로그인 </BaseButton>
-          <BaseButton variant="primary" @click="router.push('/register')"> 회원가입 </BaseButton>
+          <BaseButton variant="outline" @click="router.push('/login')">
+            로그인
+          </BaseButton>
+          <BaseButton variant="primary" @click="router.push('/register')">
+            회원가입
+          </BaseButton>
         </template>
 
         <template v-else>
-          <BaseText variant="body" color="dark" weight="medium"> 환영합니다, {{ user?.name }}님! </BaseText>
-          <BaseButton variant="secondary" @click="handleLogout"> 로그아웃 </BaseButton>
+          <BaseText variant="body" color="dark" weight="medium">
+            환영합니다, {{ user?.name }}님!
+          </BaseText>
+          <BaseButton variant="secondary" @click="handleLogout">
+            로그아웃
+          </BaseButton>
         </template>
       </div>
     </div>
@@ -19,11 +29,23 @@
     <div class="container">
       <Sidebar />
       <div class="home__content">
-        <BaseText tag="h2" variant="heading2" color="dark" weight="semibold" align="center"> 환영합니다! 🎉 </BaseText>
+        <BaseText
+          tag="h2"
+          variant="heading2"
+          color="dark"
+          weight="semibold"
+          align="center"
+        >
+          환영합니다! 🎉
+        </BaseText>
 
-        <BaseText variant="body" color="secondary" align="center"> DevQoo 플랫폼에 오신 것을 환영합니다. </BaseText>
+        <BaseText variant="body" color="secondary" align="center">
+          DevQoo 플랫폼에 오신 것을 환영합니다.
+        </BaseText>
 
-        <BaseText variant="body" color="secondary" align="center"> 교육과 커뮤니티를 통해 성장하는 개발자들의 공간입니다. </BaseText>
+        <BaseText variant="body" color="secondary" align="center">
+          교육과 커뮤니티를 통해 성장하는 개발자들의 공간입니다.
+        </BaseText>
         <router-view />
       </div>
     </div>
@@ -31,12 +53,12 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useRouter } from 'vue-router';
-import { useAuthStore } from '@/stores/auth';
-import BaseText from '@/components/atoms/BaseText.vue';
-import BaseButton from '@/components/atoms/BaseButton.vue';
-import Sidebar from '../components/Sidebar.vue';
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
+import BaseText from '@/components/atoms/BaseText.vue'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import Sidebar from '../components/Sidebar.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -47,7 +69,7 @@ const user = computed(() => authStore.user)
 const handleLogout = () => {
   authStore.logout()
   router.push('/login')
-};
+}
 </script>
 
 <style scoped>
