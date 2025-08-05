@@ -29,12 +29,12 @@ const routes = [
     component: Register,
     meta: { requiresGuest: true }
   }
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes
-});
+})
 
 // Navigation Guards
 router.beforeEach((to, from, next) => {
@@ -53,6 +53,6 @@ router.beforeEach((to, from, next) => {
   }
 
   next()
-});
+})
 
-export default router;
+export default router
