@@ -46,8 +46,8 @@
         <BaseText variant="body" color="secondary" align="center">
           교육과 커뮤니티를 통해 성장하는 개발자들의 공간입니다.
         </BaseText>
-        <router-view />
       </div>
+      <RouterView />
     </div>
   </div>
 </template>

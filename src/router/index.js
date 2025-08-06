@@ -15,7 +15,25 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false },
+    children: [
+      {
+        path: 'q',
+        name: 'Q',
+        component: { template: '<div>Q&A Page</div>' }
+      },
+      {
+        path: 'a',
+        name: 'A',
+        component: { template: '<div>Article Page</div>' }
+      },
+      {
+        // /home 로 진입했을 때 기본 보여줄 컴포넌트 (선택)
+        path: '',
+        name: 'HomeDefault',
+        component: { template: '<div>Welcome Home</div>' }
+      }
+    ]
   },
   {
     path: '/login',

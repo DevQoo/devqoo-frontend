@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li>
-          <router-link to="#" class="nav-link"
+          <router-link to="/home/q" class="nav-link"
             ><font-awesome-icon
               icon="fa-solid fa-clipboard-question"
               class="nav-icon"
@@ -12,7 +12,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="#" class="nav-link"
+          <router-link to="/home/a" class="nav-link"
             ><font-awesome-icon
               icon="fa-solid fa-clipboard-list"
               class="nav-icon"
@@ -67,10 +67,11 @@ span {
   text-align: center;
 }
 
-.is-active {
+.router-link-active span {
   color: #8b5cf6;
 }
-.is-active .nav-icon {
+
+.router-link-active .nav-icon {
   color: #8b5cf6;
 }
 </style>
