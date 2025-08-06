@@ -66,4 +66,11 @@ span {
   flex-grow: 1;
   text-align: center;
 }
+
+.is-active {
+  color: #8b5cf6;
+}
+.is-active .nav-icon {
+  color: #8b5cf6;
+}
 </style>
