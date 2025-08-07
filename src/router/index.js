@@ -21,11 +21,6 @@ const routes = [
     meta: { requiresAuth: false },
     children: [
       {
-        path: 'q',
-        name: 'PostListView',
-        component: PostListView
-      },
-      {
         path: 'a',
         name: 'PostDetailView',
         component: PostDetailView
