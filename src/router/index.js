@@ -5,6 +5,9 @@ import { useAuthStore } from '@/stores/auth'
 import Login from '@/pages/Login.vue'
 import Register from '@/pages/Register.vue'
 import Home from '@/pages/Home.vue'
+import PostListView from '../components/PostListView.vue'
+import PostDetailView from '../components/PostDetailView.vue'
+import MyActivityView from '../components/MyActivityView.vue'
 
 const routes = [
   {
@@ -19,19 +22,24 @@ const routes = [
     children: [
       {
         path: 'q',
-        name: 'Q',
-        component: { template: '<div>Q&A Page</div>' }
+        name: 'PostListView',
+        component: PostListView
       },
       {
         path: 'a',
-        name: 'A',
-        component: { template: '<div>Article Page</div>' }
+        name: 'PostDetailView',
+        component: PostDetailView
+      },
+      {
+        path: 'my',
+        name: 'MyActivityView',
+        component: MyActivityView
       },
       {
         // /home 로 진입했을 때 기본 보여줄 컴포넌트 (선택)
         path: '',
-        name: 'HomeDefault',
-        component: { template: '<div>Welcome Home</div>' }
+        name: 'PostListView',
+        component: PostListView
       }
     ]
   },
